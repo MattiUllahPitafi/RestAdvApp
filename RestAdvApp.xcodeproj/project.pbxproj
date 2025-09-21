@@ -1,0 +1,558 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8117686D2E3FE85F00731476 /* BookingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8117686C2E3FE85F00731476 /* BookingView.swift */; };
+		8117686F2E3FE8A600731476 /* Table.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8117686E2E3FE8A600731476 /* Table.swift */; };
+		814F2C802E38B61D0050B475 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 814F2C7F2E38B61D0050B475 /* Assets.xcassets */; };
+		814F2C832E38B61D0050B475 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 814F2C822E38B61D0050B475 /* Preview Assets.xcassets */; };
+		814F2C992E38D8AB0050B475 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814F2C982E38D8AB0050B475 /* LoginView.swift */; };
+		814F2C9D2E38E23E0050B475 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814F2C9C2E38E23E0050B475 /* ContentView.swift */; };
+		814F2C9F2E38E2790050B475 /* RestAdvApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814F2C9E2E38E2790050B475 /* RestAdvApp.swift */; };
+		814F2CA12E38ED600050B475 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814F2CA02E38ED600050B475 /* APIService.swift */; };
+		814F2CA32E38EDAE0050B475 /* LoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814F2CA22E38EDAE0050B475 /* LoginRequest.swift */; };
+		814F2CA52E38EDCD0050B475 /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814F2CA42E38EDCD0050B475 /* LoginResponse.swift */; };
+		814F2CA72E38EF0A0050B475 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814F2CA62E38EF0A0050B475 /* SignUpView.swift */; };
+		814F2CA92E38F2030050B475 /* RegisterRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814F2CA82E38F2030050B475 /* RegisterRequest.swift */; };
+		814F2CAB2E38F2D50050B475 /* RegisterResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814F2CAA2E38F2D50050B475 /* RegisterResponse.swift */; };
+		814F2CAE2E38F85C0050B475 /* UserHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814F2CAD2E38F85C0050B475 /* UserHome.swift */; };
+		814F2CB02E3A0C630050B475 /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814F2CAF2E3A0C630050B475 /* Restaurant.swift */; };
+		814F2CB22E3A0D160050B475 /* RestaurantCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814F2CB12E3A0D160050B475 /* RestaurantCardView.swift */; };
+		814F2CB42E3A0D680050B475 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814F2CB32E3A0D680050B475 /* SearchBar.swift */; };
+		814F2CC02E3CD4BF0050B475 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814F2CBF2E3CD4BF0050B475 /* UserViewModel.swift */; };
+		814F2CC22E3CD5BF0050B475 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814F2CC12E3CD5BF0050B475 /* UserModel.swift */; };
+		814F2CC62E3CD8070050B475 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814F2CC52E3CD8070050B475 /* ProfileView.swift */; };
+		814F2CC82E3CF0AA0050B475 /* BasicUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814F2CC72E3CF0AA0050B475 /* BasicUser.swift */; };
+		814F2CCC2E3F39B80050B475 /* AppRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814F2CCB2E3F39B80050B475 /* AppRoute.swift */; };
+		814F2CCE2E3F695F0050B475 /* Dish.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814F2CCD2E3F695F0050B475 /* Dish.swift */; };
+		814F2CD02E3F69830050B475 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814F2CCF2E3F69830050B475 /* MenuView.swift */; };
+		816DBF832E7B5DA600E24171 /* FloorPlanStaticView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 816DBF822E7B5DA600E24171 /* FloorPlanStaticView.swift */; };
+		819F95B92E720605002D162D /* Orderdetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819F95B82E720605002D162D /* Orderdetails.swift */; };
+		81AA2BD02E4734A50039D74E /* BookingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AA2BCF2E4734A50039D74E /* BookingViewModel.swift */; };
+		81AA2BE12E4C894E0039D74E /* OrderDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AA2BE02E4C894E0039D74E /* OrderDetailView.swift */; };
+		81AA2BE32E4C8F5D0039D74E /* UserBookingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AA2BE22E4C8F5D0039D74E /* UserBookingsView.swift */; };
+		81AA2BE52E4C8F800039D74E /* UserOrdersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AA2BE42E4C8F800039D74E /* UserOrdersView.swift */; };
+		81AA2BE72E4C908E0039D74E /* Booking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AA2BE62E4C908E0039D74E /* Booking.swift */; };
+		81AA2BEB2E4C94910039D74E /* BookingDeatailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AA2BEA2E4C94910039D74E /* BookingDeatailView.swift */; };
+		81AA2BEE2E546E3C0039D74E /* adminHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AA2BED2E546E3C0039D74E /* adminHome.swift */; };
+		81AA2BF32E546E8C0039D74E /* waiterHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AA2BF22E546E8C0039D74E /* waiterHome.swift */; };
+		81EF5E222E7F39F100DC3477 /* chefView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81EF5E212E7F39F100DC3477 /* chefView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		8117686C2E3FE85F00731476 /* BookingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingView.swift; sourceTree = "<group>"; };
+		8117686E2E3FE8A600731476 /* Table.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Table.swift; sourceTree = "<group>"; };
+		814F2C782E38B61A0050B475 /* RestAdvApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RestAdvApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		814F2C7F2E38B61D0050B475 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		814F2C822E38B61D0050B475 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		814F2C982E38D8AB0050B475 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		814F2C9C2E38E23E0050B475 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		814F2C9E2E38E2790050B475 /* RestAdvApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestAdvApp.swift; sourceTree = "<group>"; };
+		814F2CA02E38ED600050B475 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		814F2CA22E38EDAE0050B475 /* LoginRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRequest.swift; sourceTree = "<group>"; };
+		814F2CA42E38EDCD0050B475 /* LoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
+		814F2CA62E38EF0A0050B475 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		814F2CA82E38F2030050B475 /* RegisterRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterRequest.swift; sourceTree = "<group>"; };
+		814F2CAA2E38F2D50050B475 /* RegisterResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterResponse.swift; sourceTree = "<group>"; };
+		814F2CAD2E38F85C0050B475 /* UserHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserHome.swift; sourceTree = "<group>"; };
+		814F2CAF2E3A0C630050B475 /* Restaurant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
+		814F2CB12E3A0D160050B475 /* RestaurantCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantCardView.swift; sourceTree = "<group>"; };
+		814F2CB32E3A0D680050B475 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
+		814F2CBF2E3CD4BF0050B475 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
+		814F2CC12E3CD5BF0050B475 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		814F2CC52E3CD8070050B475 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		814F2CC72E3CF0AA0050B475 /* BasicUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicUser.swift; sourceTree = "<group>"; };
+		814F2CCB2E3F39B80050B475 /* AppRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRoute.swift; sourceTree = "<group>"; };
+		814F2CCD2E3F695F0050B475 /* Dish.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dish.swift; sourceTree = "<group>"; };
+		814F2CCF2E3F69830050B475 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
+		816DBF822E7B5DA600E24171 /* FloorPlanStaticView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloorPlanStaticView.swift; sourceTree = "<group>"; };
+		819F95B82E720605002D162D /* Orderdetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Orderdetails.swift; sourceTree = "<group>"; };
+		81AA2BCF2E4734A50039D74E /* BookingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingViewModel.swift; sourceTree = "<group>"; };
+		81AA2BE02E4C894E0039D74E /* OrderDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderDetailView.swift; sourceTree = "<group>"; };
+		81AA2BE22E4C8F5D0039D74E /* UserBookingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserBookingsView.swift; sourceTree = "<group>"; };
+		81AA2BE42E4C8F800039D74E /* UserOrdersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserOrdersView.swift; sourceTree = "<group>"; };
+		81AA2BE62E4C908E0039D74E /* Booking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Booking.swift; sourceTree = "<group>"; };
+		81AA2BEA2E4C94910039D74E /* BookingDeatailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingDeatailView.swift; sourceTree = "<group>"; };
+		81AA2BED2E546E3C0039D74E /* adminHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = adminHome.swift; sourceTree = "<group>"; };
+		81AA2BF22E546E8C0039D74E /* waiterHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = waiterHome.swift; sourceTree = "<group>"; };
+		81EF5E212E7F39F100DC3477 /* chefView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = chefView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		814F2C752E38B61A0050B475 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		814F2C6F2E38B61A0050B475 = {
+			isa = PBXGroup;
+			children = (
+				814F2C9E2E38E2790050B475 /* RestAdvApp.swift */,
+				814F2C932E38D59C0050B475 /* Utilities */,
+				814F2C922E38D5880050B475 /* ViewModels */,
+				814F2C912E38D5750050B475 /* Views */,
+				814F2C902E38D54D0050B475 /* Services */,
+				814F2C8F2E38D5210050B475 /* Models */,
+				814F2C7A2E38B61A0050B475 /* RestAdvApp */,
+				814F2C792E38B61A0050B475 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		814F2C792E38B61A0050B475 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				814F2C782E38B61A0050B475 /* RestAdvApp.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		814F2C7A2E38B61A0050B475 /* RestAdvApp */ = {
+			isa = PBXGroup;
+			children = (
+				814F2C7F2E38B61D0050B475 /* Assets.xcassets */,
+				814F2C812E38B61D0050B475 /* Preview Content */,
+			);
+			path = RestAdvApp;
+			sourceTree = "<group>";
+		};
+		814F2C812E38B61D0050B475 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				814F2C822E38B61D0050B475 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		814F2C8F2E38D5210050B475 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				814F2CA22E38EDAE0050B475 /* LoginRequest.swift */,
+				814F2CA42E38EDCD0050B475 /* LoginResponse.swift */,
+				814F2CA82E38F2030050B475 /* RegisterRequest.swift */,
+				814F2CAA2E38F2D50050B475 /* RegisterResponse.swift */,
+				814F2CAF2E3A0C630050B475 /* Restaurant.swift */,
+				814F2CBF2E3CD4BF0050B475 /* UserViewModel.swift */,
+				814F2CC12E3CD5BF0050B475 /* UserModel.swift */,
+				814F2CC72E3CF0AA0050B475 /* BasicUser.swift */,
+				814F2CCB2E3F39B80050B475 /* AppRoute.swift */,
+				814F2CCD2E3F695F0050B475 /* Dish.swift */,
+				8117686E2E3FE8A600731476 /* Table.swift */,
+				81AA2BCF2E4734A50039D74E /* BookingViewModel.swift */,
+				81AA2BE62E4C908E0039D74E /* Booking.swift */,
+				819F95B82E720605002D162D /* Orderdetails.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		814F2C902E38D54D0050B475 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				814F2CA02E38ED600050B475 /* APIService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		814F2C912E38D5750050B475 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				81AA2BF42E546EA80039D74E /* ChefScreen */,
+				81AA2BEF2E546E440039D74E /* waiterScreen */,
+				81AA2BEC2E546E260039D74E /* AdminScreen */,
+				814F2CAC2E38F8040050B475 /* UserScreen */,
+				814F2C952E38D7E40050B475 /* Landing */,
+				814F2C942E38D7DC0050B475 /* Auth */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		814F2C922E38D5880050B475 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		814F2C932E38D59C0050B475 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		814F2C942E38D7DC0050B475 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				814F2C982E38D8AB0050B475 /* LoginView.swift */,
+				814F2CA62E38EF0A0050B475 /* SignUpView.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		814F2C952E38D7E40050B475 /* Landing */ = {
+			isa = PBXGroup;
+			children = (
+				814F2C9C2E38E23E0050B475 /* ContentView.swift */,
+			);
+			path = Landing;
+			sourceTree = "<group>";
+		};
+		814F2CAC2E38F8040050B475 /* UserScreen */ = {
+			isa = PBXGroup;
+			children = (
+				814F2CAD2E38F85C0050B475 /* UserHome.swift */,
+				814F2CB12E3A0D160050B475 /* RestaurantCardView.swift */,
+				814F2CB32E3A0D680050B475 /* SearchBar.swift */,
+				814F2CC52E3CD8070050B475 /* ProfileView.swift */,
+				814F2CCF2E3F69830050B475 /* MenuView.swift */,
+				8117686C2E3FE85F00731476 /* BookingView.swift */,
+				81AA2BE02E4C894E0039D74E /* OrderDetailView.swift */,
+				81AA2BE22E4C8F5D0039D74E /* UserBookingsView.swift */,
+				81AA2BE42E4C8F800039D74E /* UserOrdersView.swift */,
+				81AA2BEA2E4C94910039D74E /* BookingDeatailView.swift */,
+				816DBF822E7B5DA600E24171 /* FloorPlanStaticView.swift */,
+			);
+			path = UserScreen;
+			sourceTree = "<group>";
+		};
+		81AA2BEC2E546E260039D74E /* AdminScreen */ = {
+			isa = PBXGroup;
+			children = (
+				81AA2BED2E546E3C0039D74E /* adminHome.swift */,
+			);
+			path = AdminScreen;
+			sourceTree = "<group>";
+		};
+		81AA2BEF2E546E440039D74E /* waiterScreen */ = {
+			isa = PBXGroup;
+			children = (
+				81AA2BF22E546E8C0039D74E /* waiterHome.swift */,
+			);
+			path = waiterScreen;
+			sourceTree = "<group>";
+		};
+		81AA2BF42E546EA80039D74E /* ChefScreen */ = {
+			isa = PBXGroup;
+			children = (
+				81EF5E212E7F39F100DC3477 /* chefView.swift */,
+			);
+			path = ChefScreen;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		814F2C772E38B61A0050B475 /* RestAdvApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 814F2C862E38B61D0050B475 /* Build configuration list for PBXNativeTarget "RestAdvApp" */;
+			buildPhases = (
+				814F2C742E38B61A0050B475 /* Sources */,
+				814F2C752E38B61A0050B475 /* Frameworks */,
+				814F2C762E38B61A0050B475 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RestAdvApp;
+			productName = RestAdvApp;
+			productReference = 814F2C782E38B61A0050B475 /* RestAdvApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		814F2C702E38B61A0050B475 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1410;
+				LastUpgradeCheck = 1410;
+				TargetAttributes = {
+					814F2C772E38B61A0050B475 = {
+						CreatedOnToolsVersion = 14.1;
+						LastSwiftMigration = 1410;
+					};
+				};
+			};
+			buildConfigurationList = 814F2C732E38B61A0050B475 /* Build configuration list for PBXProject "RestAdvApp" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 814F2C6F2E38B61A0050B475;
+			productRefGroup = 814F2C792E38B61A0050B475 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				814F2C772E38B61A0050B475 /* RestAdvApp */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		814F2C762E38B61A0050B475 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				814F2C832E38B61D0050B475 /* Preview Assets.xcassets in Resources */,
+				814F2C802E38B61D0050B475 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		814F2C742E38B61A0050B475 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				814F2CB42E3A0D680050B475 /* SearchBar.swift in Sources */,
+				81AA2BE32E4C8F5D0039D74E /* UserBookingsView.swift in Sources */,
+				814F2CB02E3A0C630050B475 /* Restaurant.swift in Sources */,
+				814F2CB22E3A0D160050B475 /* RestaurantCardView.swift in Sources */,
+				814F2CAB2E38F2D50050B475 /* RegisterResponse.swift in Sources */,
+				81AA2BEE2E546E3C0039D74E /* adminHome.swift in Sources */,
+				81AA2BEB2E4C94910039D74E /* BookingDeatailView.swift in Sources */,
+				814F2CC82E3CF0AA0050B475 /* BasicUser.swift in Sources */,
+				814F2CD02E3F69830050B475 /* MenuView.swift in Sources */,
+				814F2C992E38D8AB0050B475 /* LoginView.swift in Sources */,
+				814F2CC02E3CD4BF0050B475 /* UserViewModel.swift in Sources */,
+				814F2C9F2E38E2790050B475 /* RestAdvApp.swift in Sources */,
+				81AA2BE72E4C908E0039D74E /* Booking.swift in Sources */,
+				81AA2BF32E546E8C0039D74E /* waiterHome.swift in Sources */,
+				814F2CA92E38F2030050B475 /* RegisterRequest.swift in Sources */,
+				819F95B92E720605002D162D /* Orderdetails.swift in Sources */,
+				8117686F2E3FE8A600731476 /* Table.swift in Sources */,
+				814F2CC62E3CD8070050B475 /* ProfileView.swift in Sources */,
+				81EF5E222E7F39F100DC3477 /* chefView.swift in Sources */,
+				814F2CCE2E3F695F0050B475 /* Dish.swift in Sources */,
+				81AA2BE52E4C8F800039D74E /* UserOrdersView.swift in Sources */,
+				814F2CA52E38EDCD0050B475 /* LoginResponse.swift in Sources */,
+				814F2CCC2E3F39B80050B475 /* AppRoute.swift in Sources */,
+				814F2CA72E38EF0A0050B475 /* SignUpView.swift in Sources */,
+				814F2CA12E38ED600050B475 /* APIService.swift in Sources */,
+				8117686D2E3FE85F00731476 /* BookingView.swift in Sources */,
+				81AA2BE12E4C894E0039D74E /* OrderDetailView.swift in Sources */,
+				816DBF832E7B5DA600E24171 /* FloorPlanStaticView.swift in Sources */,
+				814F2CAE2E38F85C0050B475 /* UserHome.swift in Sources */,
+				814F2CA32E38EDAE0050B475 /* LoginRequest.swift in Sources */,
+				814F2CC22E3CD5BF0050B475 /* UserModel.swift in Sources */,
+				814F2C9D2E38E23E0050B475 /* ContentView.swift in Sources */,
+				81AA2BD02E4734A50039D74E /* BookingViewModel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		814F2C842E38B61D0050B475 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		814F2C852E38B61D0050B475 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		814F2C872E38B61D0050B475 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"RestAdvApp/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Mati.RestAdvApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		814F2C882E38B61D0050B475 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"RestAdvApp/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Mati.RestAdvApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		814F2C732E38B61A0050B475 /* Build configuration list for PBXProject "RestAdvApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				814F2C842E38B61D0050B475 /* Debug */,
+				814F2C852E38B61D0050B475 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		814F2C862E38B61D0050B475 /* Build configuration list for PBXNativeTarget "RestAdvApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				814F2C872E38B61D0050B475 /* Debug */,
+				814F2C882E38B61D0050B475 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 814F2C702E38B61A0050B475 /* Project object */;
+}
