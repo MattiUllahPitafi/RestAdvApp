@@ -7,4 +7,5 @@ struct LoginResponse: Codable {
     let name: String
     let email: String
     let role: String
+    let restaurantId: Int?  
 }

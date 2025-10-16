@@ -151,7 +151,7 @@ struct OrderDetailView: View {
             return
         }
 
-        guard let url = URL(string: "http://10.211.55.4/BooknowAPI/api/order/byUser/\(userId)") else {
+        guard let url = URL(string: "http://10.211.55.7/BooknowAPI/api/order/byUser/\(userId)") else {
             errorMessage = "Invalid API URL"
             isLoading = false
             return
@@ -226,7 +226,7 @@ struct OrderDetailView: View {
 //    }
     // MARK: - Cancel Order
     private func cancelOrder(orderId: Int) {
-        guard let url = URL(string: "http://10.211.55.4/BooknowAPI/api/order/status/\(orderId)") else {
+        guard let url = URL(string: "http://10.211.55.7/BooknowAPI/api/order/status/\(orderId)") else {
             errorMessage = "Invalid cancel URL"
             return
         }

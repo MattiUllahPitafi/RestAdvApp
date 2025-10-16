@@ -121,7 +121,7 @@ struct LoginView: View {
                     case "waiter":
                         path.append(AppRoute.waiterHome)
                     case "chef":
-                        path.append(AppRoute.chefView)
+                        path.append(AppRoute.ChefView)
                     case "admin":
                         path.append(AppRoute.adminHome)
                     default:

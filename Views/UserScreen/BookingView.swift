@@ -1,4 +1,4 @@
-//trying floorplan
+
 import SwiftUI
 
 struct MusicItem: Identifiable, Codable {
@@ -20,25 +20,27 @@ struct BookingResponse: Codable {
     let message: String
 }
 
-
 struct BookingView: View {
     let restaurantId: Int
     @Binding var path: NavigationPath
     @EnvironmentObject var userVM: UserViewModel
-
+    
     @State private var selectedDate = Date()
     @State private var tables: [Table] = []
     @State private var isLoading = false
     @State private var errorMessage: String?
     @State private var selectedTable: Table?
-
+    @State private var selectedFloor: Int? = nil
+    @State private var showFloorList = false
+    let availableFloors = [1, 2, 3]
+    
     // Music
     @State private var musicList: [MusicItem] = []
     @State private var selectedMusicId: Int?
     @State private var musicLoading = false
     @State private var musicErrorMessage: String?
     @State private var showMusicList = false
-
+    
     // Coin categories
     let coinCategories = [
         (id: 1, name: "Gold"),
@@ -46,18 +48,38 @@ struct BookingView: View {
         (id: 3, name: "Platinum")
     ]
     @State private var selectedCoinCategoryId: Int?
-
+    
     // Booking
     @State private var specialRequest = ""
     @State private var isBooking = false
     @State private var bookingMessage: String?
-
+    
     var body: some View {
         VStack(spacing: 16) {
             if selectedTable == nil {
-                DatePicker("Select Booking Time", selection: $selectedDate)
-                    .datePickerStyle(.compact)
-                    .padding(.horizontal)
+                HStack {
+                    DatePicker("Select Booking Time", selection: $selectedDate)
+                        .datePickerStyle(.compact)
+                    
+                    Spacer()
+                    
+                    Menu {
+                        ForEach(availableFloors, id: \.self) { floor in
+                            Button("Floor \(floor)") {
+                                selectedFloor = floor
+                            }
+                        }
+                    } label: {
+                        HStack {
+                            Text(selectedFloor != nil ? "Floor \(selectedFloor!)" : "Select Floor")
+                            Image(systemName: "chevron.down")
+                        }
+                        .padding(8)
+                        .background(Color(.systemGray6))
+                        .cornerRadius(8)
+                    }
+                }
+                .padding(.horizontal)
                 
                 Button("Check Availability") {
                     fetchTables(for: selectedDate)
@@ -78,9 +100,8 @@ struct BookingView: View {
                             }
                         }
                     )
-                    .frame(maxWidth: .infinity, maxHeight: .infinity) // ✅ only here
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
                 }
-
             } else {
                 VStack(alignment: .leading, spacing: 16) {
                     Text("Booking Details").font(.title2).bold()
@@ -158,22 +179,28 @@ struct BookingView: View {
         }
         .navigationTitle("Book Table")
     }
-
+    
     // MARK: - Fetch Tables
     private func fetchTables(for date: Date) {
         isLoading = true
         errorMessage = nil
-
+        
         let isoFormatter = ISO8601DateFormatter()
         isoFormatter.formatOptions = [.withInternetDateTime]
         let dateString = isoFormatter.string(from: date)
-
-        guard let url = URL(string: "http://10.211.55.4/BooknowAPI/api/tables/available/\(restaurantId)?datetime=\(dateString)") else {
+        
+        var urlString = "http://10.211.55.7/BooknowAPI/api/tables/available/\(restaurantId)?datetime=\(dateString)"
+        
+        if let floor = selectedFloor {
+            urlString += "&floor=\(floor)"
+        }
+        
+        guard let url = URL(string: urlString) else {
             errorMessage = "Invalid URL"
             isLoading = false
             return
         }
-
+        
         URLSession.shared.dataTask(with: url) { data, _, error in
             DispatchQueue.main.async {
                 isLoading = false
@@ -193,18 +220,18 @@ struct BookingView: View {
             }
         }.resume()
     }
-
+    
     // MARK: - Fetch Music
     private func fetchMusicList() {
         musicLoading = true
         musicErrorMessage = nil
-
-        guard let url = URL(string: "http://10.211.55.4/BooknowAPI/api/Music/getall") else {
+        
+        guard let url = URL(string: "http://10.211.55.7/BooknowAPI/api/Music/getall") else {
             musicErrorMessage = "Invalid URL"
             musicLoading = false
             return
         }
-
+        
         URLSession.shared.dataTask(with: url) { data, _, error in
             DispatchQueue.main.async {
                 musicLoading = false
@@ -224,7 +251,7 @@ struct BookingView: View {
             }
         }.resume()
     }
-
+    
     // MARK: - Confirm Booking
     private func confirmBooking() {
         guard let userId = userVM.user?.userId else {
@@ -235,31 +262,37 @@ struct BookingView: View {
             bookingMessage = "⚠️ Please select a table."
             return
         }
-
+        
         isBooking = true
         bookingMessage = nil
-
+        
+        // ✅ Format booking date in local time (yyyy-MM-dd HH:mm:ss)
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+        formatter.timeZone = .current
+        let bookingDateString = formatter.string(from: selectedDate)
+        
         let bookingRequest: [String: Any?] = [
             "userId": userId,
             "tableId": table.tableId,
-            "bookingDateTime": ISO8601DateFormatter().string(from: selectedDate),
+            "bookingDateTime": bookingDateString,   // 👈 send formatted string
             "specialRequest": specialRequest,
             "status": "AutoBooked",
             "restaurantId": restaurantId,
             "musicId": selectedMusicId,
             "coinCategoryId": selectedCoinCategoryId
         ]
-
-        guard let url = URL(string: "http://10.211.55.4/BooknowAPI/api/Bookings/create") else {
+        
+        guard let url = URL(string: "http://10.211.55.7/BooknowAPI/api/Bookings/create") else {
             bookingMessage = "Invalid URL"
             isBooking = false
             return
         }
-
+        
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-
+        
         do {
             request.httpBody = try JSONSerialization.data(withJSONObject: bookingRequest.compactMapValues { $0 })
         } catch {
@@ -267,7 +300,7 @@ struct BookingView: View {
             isBooking = false
             return
         }
-
+        
         URLSession.shared.dataTask(with: request) { data, response, error in
             DispatchQueue.main.async {
                 isBooking = false
@@ -279,7 +312,7 @@ struct BookingView: View {
                     bookingMessage = "No response from server"
                     return
                 }
-
+                
                 if httpResponse.statusCode == 200 {
                     bookingMessage = "✅ Booking confirmed successfully!"
                     if let data = data,
@@ -295,8 +328,82 @@ struct BookingView: View {
             }
         }.resume()
     }
+
+//    private func confirmBooking() {
+//        guard let userId = userVM.user?.userId else {
+//            bookingMessage = "⚠️ Please log in first."
+//            return
+//        }
+//        guard let table = selectedTable else {
+//            bookingMessage = "⚠️ Please select a table."
+//            return
+//        }
+//
+//        isBooking = true
+//        bookingMessage = nil
+//
+//        let bookingRequest: [String: Any?] = [
+//            "userId": userId,
+//            "tableId": table.tableId,
+//            "bookingDateTime": ISO8601DateFormatter().string(from: selectedDate),
+//            "specialRequest": specialRequest,
+//            "status": "AutoBooked",
+//            "restaurantId": restaurantId,
+//            "musicId": selectedMusicId,
+//            "coinCategoryId": selectedCoinCategoryId
+//        ]
+//
+//        guard let url = URL(string: "http://10.211.55.4/BooknowAPI/api/Bookings/create") else {
+//            bookingMessage = "Invalid URL"
+//            isBooking = false
+//            return
+//        }
+//
+//        var request = URLRequest(url: url)
+//        request.httpMethod = "POST"
+//        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+//
+//        do {
+//            request.httpBody = try JSONSerialization.data(withJSONObject: bookingRequest.compactMapValues { $0 })
+//        } catch {
+//            bookingMessage = "Failed to encode booking"
+//            isBooking = false
+//            return
+//        }
+//
+//        URLSession.shared.dataTask(with: request) { data, response, error in
+//            DispatchQueue.main.async {
+//                isBooking = false
+//                if let error = error {
+//                    bookingMessage = "Error: \(error.localizedDescription)"
+//                    return
+//                }
+//                guard let httpResponse = response as? HTTPURLResponse else {
+//                    bookingMessage = "No response from server"
+//                    return
+//                }
+//
+//                if httpResponse.statusCode == 200 {
+//                    bookingMessage = "✅ Booking confirmed successfully!"
+//                    if let data = data,
+//                       let bookingResponse = try? JSONDecoder().decode(BookingResponse.self, from: data) {
+//                        path.append(AppRoute.menu(
+//                            restaurantId: restaurantId,
+//                            bookingId: bookingResponse.bookingId
+//                        ))
+//                    }
+//                } else {
+//                    bookingMessage = "Failed to confirm booking (Status: \(httpResponse.statusCode))"
+//                }
+//            }
+//        }.resume()
+//    }
 }
 
+
+
+
+// working
 //import SwiftUI
 //
 //struct MusicItem: Identifiable, Codable {

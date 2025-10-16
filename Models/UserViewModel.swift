@@ -6,7 +6,7 @@ class UserViewModel: ObservableObject {
     @Published var errorMessage: String?
 
     func fetchUser(userId: Int) async {
-        guard let url = URL(string: "http://10.211.55.4/BooknowAPI/api/Users/Get/\(userId)") else {
+        guard let url = URL(string: "http://10.211.55.7/BooknowAPI/api/Users/Get/\(userId)") else {
             DispatchQueue.main.async {
                 self.errorMessage = "Invalid profile URL"
             }
@@ -28,9 +28,34 @@ class UserViewModel: ObservableObject {
             }
         }
     }
+    @Published var restaurantId: Int?
+
+    func fetchAdminRestaurant(userId: Int) async {
+        guard let url = URL(string: "http://10.211.55.7/BooknowAPI/api/Admins/GetByUser/\(userId)") else {
+            DispatchQueue.main.async {
+                self.errorMessage = "Invalid admin URL"
+            }
+            return
+        }
+
+        do {
+            let (data, _) = try await URLSession.shared.data(from: url)
+            let adminInfo = try JSONDecoder().decode(AdminModel.self, from: data)
+
+            DispatchQueue.main.async {
+                self.restaurantId = adminInfo.restaurantId
+                UserDefaults.standard.set(adminInfo.restaurantId, forKey: "restaurantId")
+            }
+        } catch {
+            DispatchQueue.main.async {
+                self.errorMessage = "Failed to load admin info: \(error.localizedDescription)"
+            }
+        }
+    }
+
     @MainActor
     func updateUserProfile(userId: Int, name: String, email: String, passwordHash: String) async {
-        guard let url = URL(string: "http://10.211.55.4/BooknowAPI/api/Users/Update/\(userId)") else {
+        guard let url = URL(string: "http://10.211.55.7/BooknowAPI/api/Users/Update/\(userId)") else {
             DispatchQueue.main.async {
                 self.errorMessage = "Invalid update URL"
             }

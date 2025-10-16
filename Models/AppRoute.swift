@@ -8,7 +8,7 @@ enum AppRoute: Hashable {
     case userHome
     case adminHome
     case waiterHome
-    case chefView
+    case ChefView
     case profile
     case menu(restaurantId: Int, bookingId: Int)
     case booking(restaurantId: Int)

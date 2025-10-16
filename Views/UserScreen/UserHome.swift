@@ -59,9 +59,9 @@ struct UserHome: View {
                         ForEach(filteredRestaurants) { restaurant in
                             RestaurantCardView(
                                 restaurant: restaurant,
-                                onMenuTap: {
-                                    rootPath.append(AppRoute.booking(restaurantId: restaurant.id))
-                                },
+//                                onMenuTap: {
+//                                    rootPath.append(AppRoute.booking(restaurantId: restaurant.id))
+//                                },
                                 onCardTap: {
                                     rootPath.append(AppRoute.booking(restaurantId: restaurant.id))
                                 }

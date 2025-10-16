@@ -2,7 +2,7 @@ import Foundation
 
 class APIService {
     static let shared = APIService()
-    private let baseURL = "http://10.211.55.4/BooknowAPI/api"
+    private let baseURL = "http://10.211.55.7/BooknowAPI/api"
 
     // MARK: - Login
     func loginUser(email: String, password: String, completion: @escaping (Result<LoginResponse, Error>) -> Void) {

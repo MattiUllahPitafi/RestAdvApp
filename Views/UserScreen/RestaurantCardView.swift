@@ -1,14 +1,14 @@
 import SwiftUI
-
+let apiurl = "http://10.211.55.7/"
 struct RestaurantCardView: View {
     var restaurant: Restaurant
-    var onMenuTap: () -> Void
+//    var onMenuTap: () -> Void
     var onCardTap: () -> Void
 
     var body: some View {
         VStack(spacing: 0) {
             // Restaurant image
-            AsyncImage(url: URL(string: restaurant.imageUrl)) { image in
+            AsyncImage(url: URL(string: apiurl + restaurant.imageUrl)) { image in
                 image.resizable()
             } placeholder: {
                 Color.gray.opacity(0.2)
@@ -31,17 +31,27 @@ struct RestaurantCardView: View {
             .padding()
 
             // Orange menu stripe — Tappable separately
-            Rectangle()
-                .fill(Color.orange)
-                .frame(height: 40)
-                .overlay(
-                    Text("View Menu")
-                        .foregroundColor(.white)
-                        .bold()
-                )
-                .onTapGesture {
-                    onMenuTap()
-                }
+//            Rectangle()
+//                .fill(Color.orange)
+//                .frame(height: 40)
+//                .overlay(
+//                    Text("View Menu")
+//                        .foregroundColor(.white)
+//                        .bold()
+//                )
+//                .onTapGesture {
+//                    onMenuTap()
+//                }
+            NavigationLink(destination: MenuBeforeBooking(restaurantId: restaurant.id)) {
+                           Rectangle()
+                               .fill(Color.orange)
+                               .frame(height: 40)
+                               .overlay(
+                                   Text("View Menu")
+                                       .foregroundColor(.white)
+                                       .bold()
+                               )
+                       }
         }
         .background(Color.white)
         .cornerRadius(12)

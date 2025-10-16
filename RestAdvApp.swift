@@ -27,16 +27,21 @@ struct RestAdvApp: App {
                         case .userHome:
                             UserHome(rootPath: $path)
                                 .environmentObject(userVM)
-
                         case .adminHome:
-                            Text("Admin Home") // Replace with AdminHomeView()
+                            adminHome()
+                                .environmentObject(userVM)
+                        case.waiterHome:
+                            waiterHome(rootPath: $path)
+                                .environmentObject(userVM)
+//
 
-                        case .waiterHome:
-                            Text("Waiter Home") // Replace with WaiterHomeView()
-
-                        case .chefView:
-                            chefView()
-                                .environmentObject(userVM)// Replace with ChefHomeView()
+//                        case .chefView:
+//                            chefView()
+//                                .environmentObject(userVM)// Replace with ChefHomeView()
+                        
+                        case .ChefView:
+                            ChefView(rootPath: $path)
+                                .environmentObject(userVM)
 
                         case .menu(let restaurantId, let bookingId):
                             MenuView(restaurantId: restaurantId, bookingId: bookingId)

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		8117686D2E3FE85F00731476 /* BookingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8117686C2E3FE85F00731476 /* BookingView.swift */; };
 		8117686F2E3FE8A600731476 /* Table.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8117686E2E3FE8A600731476 /* Table.swift */; };
+		812D20592E8136B3002B2C91 /* Menubeforebooking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812D20582E8136B2002B2C91 /* Menubeforebooking.swift */; };
 		814F2C802E38B61D0050B475 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 814F2C7F2E38B61D0050B475 /* Assets.xcassets */; };
 		814F2C832E38B61D0050B475 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 814F2C822E38B61D0050B475 /* Preview Assets.xcassets */; };
 		814F2C992E38D8AB0050B475 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814F2C982E38D8AB0050B475 /* LoginView.swift */; };
@@ -32,6 +33,9 @@
 		814F2CCE2E3F695F0050B475 /* Dish.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814F2CCD2E3F695F0050B475 /* Dish.swift */; };
 		814F2CD02E3F69830050B475 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814F2CCF2E3F69830050B475 /* MenuView.swift */; };
 		816DBF832E7B5DA600E24171 /* FloorPlanStaticView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 816DBF822E7B5DA600E24171 /* FloorPlanStaticView.swift */; };
+		819166A52E98089200ED0D41 /* showChef.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819166A42E98089200ED0D41 /* showChef.swift */; };
+		819166A72E9816C000ED0D41 /* showTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819166A62E9816C000ED0D41 /* showTable.swift */; };
+		819B199C2E85A9B400E5E10C /* AdminModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819B199B2E85A9B400E5E10C /* AdminModel.swift */; };
 		819F95B92E720605002D162D /* Orderdetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819F95B82E720605002D162D /* Orderdetails.swift */; };
 		81AA2BD02E4734A50039D74E /* BookingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AA2BCF2E4734A50039D74E /* BookingViewModel.swift */; };
 		81AA2BE12E4C894E0039D74E /* OrderDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AA2BE02E4C894E0039D74E /* OrderDetailView.swift */; };
@@ -41,12 +45,13 @@
 		81AA2BEB2E4C94910039D74E /* BookingDeatailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AA2BEA2E4C94910039D74E /* BookingDeatailView.swift */; };
 		81AA2BEE2E546E3C0039D74E /* adminHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AA2BED2E546E3C0039D74E /* adminHome.swift */; };
 		81AA2BF32E546E8C0039D74E /* waiterHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AA2BF22E546E8C0039D74E /* waiterHome.swift */; };
-		81EF5E222E7F39F100DC3477 /* chefView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81EF5E212E7F39F100DC3477 /* chefView.swift */; };
+		81EF5E222E7F39F100DC3477 /* ChefView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81EF5E212E7F39F100DC3477 /* ChefView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		8117686C2E3FE85F00731476 /* BookingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingView.swift; sourceTree = "<group>"; };
 		8117686E2E3FE8A600731476 /* Table.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Table.swift; sourceTree = "<group>"; };
+		812D20582E8136B2002B2C91 /* Menubeforebooking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Menubeforebooking.swift; sourceTree = "<group>"; };
 		814F2C782E38B61A0050B475 /* RestAdvApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RestAdvApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		814F2C7F2E38B61D0050B475 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		814F2C822E38B61D0050B475 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -71,6 +76,9 @@
 		814F2CCD2E3F695F0050B475 /* Dish.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dish.swift; sourceTree = "<group>"; };
 		814F2CCF2E3F69830050B475 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 		816DBF822E7B5DA600E24171 /* FloorPlanStaticView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloorPlanStaticView.swift; sourceTree = "<group>"; };
+		819166A42E98089200ED0D41 /* showChef.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = showChef.swift; sourceTree = "<group>"; };
+		819166A62E9816C000ED0D41 /* showTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = showTable.swift; sourceTree = "<group>"; };
+		819B199B2E85A9B400E5E10C /* AdminModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminModel.swift; sourceTree = "<group>"; };
 		819F95B82E720605002D162D /* Orderdetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Orderdetails.swift; sourceTree = "<group>"; };
 		81AA2BCF2E4734A50039D74E /* BookingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingViewModel.swift; sourceTree = "<group>"; };
 		81AA2BE02E4C894E0039D74E /* OrderDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderDetailView.swift; sourceTree = "<group>"; };
@@ -80,7 +88,7 @@
 		81AA2BEA2E4C94910039D74E /* BookingDeatailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingDeatailView.swift; sourceTree = "<group>"; };
 		81AA2BED2E546E3C0039D74E /* adminHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = adminHome.swift; sourceTree = "<group>"; };
 		81AA2BF22E546E8C0039D74E /* waiterHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = waiterHome.swift; sourceTree = "<group>"; };
-		81EF5E212E7F39F100DC3477 /* chefView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = chefView.swift; sourceTree = "<group>"; };
+		81EF5E212E7F39F100DC3477 /* ChefView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChefView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,6 +158,7 @@
 				81AA2BCF2E4734A50039D74E /* BookingViewModel.swift */,
 				81AA2BE62E4C908E0039D74E /* Booking.swift */,
 				819F95B82E720605002D162D /* Orderdetails.swift */,
+				819B199B2E85A9B400E5E10C /* AdminModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -220,6 +229,7 @@
 				81AA2BE42E4C8F800039D74E /* UserOrdersView.swift */,
 				81AA2BEA2E4C94910039D74E /* BookingDeatailView.swift */,
 				816DBF822E7B5DA600E24171 /* FloorPlanStaticView.swift */,
+				812D20582E8136B2002B2C91 /* Menubeforebooking.swift */,
 			);
 			path = UserScreen;
 			sourceTree = "<group>";
@@ -228,6 +238,8 @@
 			isa = PBXGroup;
 			children = (
 				81AA2BED2E546E3C0039D74E /* adminHome.swift */,
+				819166A42E98089200ED0D41 /* showChef.swift */,
+				819166A62E9816C000ED0D41 /* showTable.swift */,
 			);
 			path = AdminScreen;
 			sourceTree = "<group>";
@@ -243,7 +255,7 @@
 		81AA2BF42E546EA80039D74E /* ChefScreen */ = {
 			isa = PBXGroup;
 			children = (
-				81EF5E212E7F39F100DC3477 /* chefView.swift */,
+				81EF5E212E7F39F100DC3477 /* ChefView.swift */,
 			);
 			path = ChefScreen;
 			sourceTree = "<group>";
@@ -323,10 +335,12 @@
 				81AA2BE32E4C8F5D0039D74E /* UserBookingsView.swift in Sources */,
 				814F2CB02E3A0C630050B475 /* Restaurant.swift in Sources */,
 				814F2CB22E3A0D160050B475 /* RestaurantCardView.swift in Sources */,
+				819166A52E98089200ED0D41 /* showChef.swift in Sources */,
 				814F2CAB2E38F2D50050B475 /* RegisterResponse.swift in Sources */,
 				81AA2BEE2E546E3C0039D74E /* adminHome.swift in Sources */,
 				81AA2BEB2E4C94910039D74E /* BookingDeatailView.swift in Sources */,
 				814F2CC82E3CF0AA0050B475 /* BasicUser.swift in Sources */,
+				819166A72E9816C000ED0D41 /* showTable.swift in Sources */,
 				814F2CD02E3F69830050B475 /* MenuView.swift in Sources */,
 				814F2C992E38D8AB0050B475 /* LoginView.swift in Sources */,
 				814F2CC02E3CD4BF0050B475 /* UserViewModel.swift in Sources */,
@@ -337,15 +351,17 @@
 				819F95B92E720605002D162D /* Orderdetails.swift in Sources */,
 				8117686F2E3FE8A600731476 /* Table.swift in Sources */,
 				814F2CC62E3CD8070050B475 /* ProfileView.swift in Sources */,
-				81EF5E222E7F39F100DC3477 /* chefView.swift in Sources */,
+				81EF5E222E7F39F100DC3477 /* ChefView.swift in Sources */,
 				814F2CCE2E3F695F0050B475 /* Dish.swift in Sources */,
 				81AA2BE52E4C8F800039D74E /* UserOrdersView.swift in Sources */,
+				812D20592E8136B3002B2C91 /* Menubeforebooking.swift in Sources */,
 				814F2CA52E38EDCD0050B475 /* LoginResponse.swift in Sources */,
 				814F2CCC2E3F39B80050B475 /* AppRoute.swift in Sources */,
 				814F2CA72E38EF0A0050B475 /* SignUpView.swift in Sources */,
 				814F2CA12E38ED600050B475 /* APIService.swift in Sources */,
 				8117686D2E3FE85F00731476 /* BookingView.swift in Sources */,
 				81AA2BE12E4C894E0039D74E /* OrderDetailView.swift in Sources */,
+				819B199C2E85A9B400E5E10C /* AdminModel.swift in Sources */,
 				816DBF832E7B5DA600E24171 /* FloorPlanStaticView.swift in Sources */,
 				814F2CAE2E38F85C0050B475 /* UserHome.swift in Sources */,
 				814F2CA32E38EDAE0050B475 /* LoginRequest.swift in Sources */,
